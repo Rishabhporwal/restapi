@@ -4,7 +4,7 @@ const Schema = mongoose.Schema;
 const postSchema = new Schema(
   {
     title: {
-      title: String,
+      type: String,
       required: true
     },
     imageUrl: {
@@ -20,7 +20,7 @@ const postSchema = new Schema(
       required: String
     }
   },
-  { timestamp: true }
+  { timestamps: true }
 );
 
 module.exports = mongoose.model('Post', postSchema);
