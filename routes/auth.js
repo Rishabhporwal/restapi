@@ -14,7 +14,7 @@ router.put('/signup', [
         return User.findOne({ email: value })
             .then(userDoc => {
                 if (userDoc) {
-                    return Promise.reject('E-Mail address  already exist');
+                    return Promise.reject('E-Mail address already exist');
                 }
             });
     })
